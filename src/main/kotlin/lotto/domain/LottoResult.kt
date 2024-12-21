@@ -8,6 +8,7 @@ import kotlin.math.roundToInt
 class LottoResult(tickets: List<LottoTicket>, win: LottoWinner, used: Int = 0) {
     var rankMap: Map<Rank, Int> = mutableMapOf()
         private set
+
     private var totalCount: Int = used
 
     private val totalPrize by lazy {

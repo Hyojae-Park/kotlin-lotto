@@ -13,8 +13,7 @@ class LottoApp {
         val count = InputView.inputUser()
         val manualTickets = InputView.inputManualTickets()
         val autoTicketCount = count - manualTickets.size
-        val autoTickets = GeneratorLottoNumbers.generateRandomLottoTickets(autoTicketCount)
-        val totalTickets = manualTickets + autoTickets
+        val totalTickets = manualTickets + GeneratorLottoNumbers.generateRandomLottoTickets(autoTicketCount)
 
         ResultView.printBuyTickets(
             manualTickets.size,
